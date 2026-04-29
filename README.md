@@ -41,8 +41,7 @@
 │  ├─ fig_04_memory_comparison.png           # 체크포인터 ON/OFF 시 4턴 대화 비교
 │  ├─ fig_05_summarization_flow.png          # 30턴 대화에 요약 미들웨어가 작동하는 모습
 │  ├─ fig_06_thread_isolation.png            # thread_id 별 대화 격리 모습
-│  ├─ fig_07_alpha_thread_walkthrough.png    # thread_alpha 5턴 통합 흐름 (분류+메모리+라우팅)
-│  └─ chatbot_run_log.json                   # 분류·대화·요약 모드 실행 로그
+│  └─ fig_07_alpha_thread_walkthrough.png    # thread_alpha 5턴 통합 흐름 (분류+메모리+라우팅)
 ├─ src/
 │  └─ production_chatbot.py                  # 통합 실행 스크립트
 ├─ .gitignore
@@ -68,22 +67,7 @@
 | :---: |
 | ![schema](results/fig_02_pydantic_schema.png) |
 
-| <br/>구성 요소 &emsp;&emsp;&emsp;&emsp; | 역할 |
-| :--- | :--- |
-| `InquiryClassification` (BaseModel) | 분류기 출력을 4개 필드(`category` · `urgency` · `summary` · `requires_human`)로 정의해, `with_structured_output` 한 줄로 LLM 응답을 이 타입으로 강제 |
-| `CustomerProfile` (BaseModel) | 챗봇이 대화 도중 추출해 thread 메모리에 보관하는 고객 프로필. 3개 필드(`name` · `company` · `last_inquiry_category`) |
-| `Literal[low, medium, high, critical]` + `Enum` | 긴급도·카테고리 값을 미리 정한 후보 안에서만 채우도록 강제 — 잘못된 값이 나오면 Pydantic 검증 단계에서 즉시 실패 |
-| `Field(description=...)` | LLM 이 각 필드를 어떻게 채울지 알려 주는 안내문 — 사람이 보는 문서가 아니라 모델이 읽는 가이드 |
-
-### 3. 실행 방법
-
-| 명령어 &emsp;&emsp;&emsp;&emsp;&emsp; | 동작 &emsp;&emsp;&emsp;&emsp; | LLM 호출 |
-| :--- | :--- | :---: |
-| `python src/production_chatbot.py --mode classify` | 8건 고객 문의를 Pydantic 으로 정형 분류 | ✓ |
-| `python src/production_chatbot.py --mode chat` | 4턴 대화를 WITH/WITHOUT 체크포인터로 비교 시연 | ✓ |
-| `python src/production_chatbot.py --mode summarize` | 13턴 대화에 요약 미들웨어 적용 시연 | ✓ |
-| `python src/production_chatbot.py --mode visualize` | 시각화 PNG 7장 만들기 (API 호출 불필요) | ✗ |
-| `python src/production_chatbot.py --mode all` | 위 단계 전부 한 번에 실행 | ✓ |
+> 분류기 출력용 **`InquiryClassification`** (4개 필드) 과 챗봇이 thread 메모리에 보관하는 **`CustomerProfile`** (3개 필드) 을 분리했습니다. 모든 필드 값은 `Literal` · `Enum` 으로 후보를 한정해, 잘못된 값이 나오면 Pydantic 검증 단계에서 즉시 실패합니다.
 
 ---
 
