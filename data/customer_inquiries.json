@@ -1,0 +1,50 @@
+[
+  {
+    "id": "INQ_001",
+    "raw_text": "제품 발송이 일주일이나 늦어졌는데 아직 연락이 없네요. 오늘 안에 답변 부탁드립니다.",
+    "expected_category": "배송지연",
+    "expected_urgency": "high"
+  },
+  {
+    "id": "INQ_002",
+    "raw_text": "초고밀도 전력 모듈(UPDM) 데이터시트를 받아볼 수 있을까요?",
+    "expected_category": "제품문의",
+    "expected_urgency": "low"
+  },
+  {
+    "id": "INQ_003",
+    "raw_text": "긴급! 양산 라인이 멈췄습니다. 커넥터 대체품 확인 가능한 분 바로 연결 부탁드립니다.",
+    "expected_category": "기술지원",
+    "expected_urgency": "critical"
+  },
+  {
+    "id": "INQ_004",
+    "raw_text": "전월 발주 건 인보이스 사본 다시 보내주실 수 있나요?",
+    "expected_category": "주문관리",
+    "expected_urgency": "medium"
+  },
+  {
+    "id": "INQ_005",
+    "raw_text": "안녕하세요, 모든전자 채용 상시 진행되나요?",
+    "expected_category": "기타",
+    "expected_urgency": "low"
+  },
+  {
+    "id": "INQ_006",
+    "raw_text": "GaN 모듈 효율 그래프와 발열 데이터 같이 받고 싶습니다.",
+    "expected_category": "제품문의",
+    "expected_urgency": "low"
+  },
+  {
+    "id": "INQ_007",
+    "raw_text": "납품일 이번 주 금요일까지 못 맞추면 페널티 발생합니다. 즉시 확인 요청드립니다.",
+    "expected_category": "배송지연",
+    "expected_urgency": "high"
+  },
+  {
+    "id": "INQ_008",
+    "raw_text": "발주서 PO 번호 PO-2026-0418 진행 상황 공유 부탁드립니다.",
+    "expected_category": "주문관리",
+    "expected_urgency": "medium"
+  }
+]
