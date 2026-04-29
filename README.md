@@ -59,7 +59,7 @@
 | :---: |
 | ![pipeline](results/fig_01_pipeline_overview.png) |
 
-> 고객 문의 한 건이 들어오면 두 갈래로 나뉘어짐. 위쪽은 **Pydantic 분류기** 가 카테고리·긴급도를 추출해 정형 객체로 반환하고, 아래쪽은 **`InMemorySaver` + `SummarizationMiddleware`** 가 부착된 멀티턴 챗봇이 자연어 답변을 만듬. 두 갈래는 같은 LLM 자원을 공유하므로, 한 입력으로 분류 결과와 자연어 응답을 동시에 얻을 수 있음.
+> 고객 문의 한 건이 들어오면 두 갈래로 나뉘어짐. 위쪽은 **Pydantic 분류기** 가 카테고리·긴급도를 추출해 정형 객체로 반환하고, 아래쪽은 **`InMemorySaver` + `SummarizationMiddleware`** 가 부착된 멀티턴 챗봇이 자연어 답변을 만들어냄. 두 갈래는 같은 LLM 자원을 공유하므로, 한 입력으로 분류 결과와 자연어 응답을 동시에 얻을 수 있음.
 
 ### 2. Pydantic 정형 응답 스키마
 
