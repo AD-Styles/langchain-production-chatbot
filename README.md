@@ -36,7 +36,7 @@
 │  └─ customer_inquiries.json                  # 8건 고객 문의 (분류기 입력)
 ├─ results/
 │  ├─ fig_01_pipeline_overview.png             # 분류 + 챗봇 + 메모리 + 요약 전체 흐름
-│  ├─ fig_02_pydantic_schema.png             # Pydantic BaseModel 스키마 다이어그램
+│  ├─ fig_02_pydantic_schema.png               # Pydantic BaseModel 스키마 다이어그램
 │  ├─ fig_03_classification_distribution.png # 8건 문의 분류 결과 (카테고리×긴급도)
 │  ├─ fig_04_memory_comparison.png           # 체크포인터 ON/OFF 시 4턴 대화 비교
 │  ├─ fig_05_summarization_flow.png          # 30턴 대화에 요약 미들웨어가 작동하는 모습
