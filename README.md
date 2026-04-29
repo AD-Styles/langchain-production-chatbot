@@ -135,4 +135,3 @@
 - LangGraph — `InMemorySaver` Checkpointer Reference
 - LangChain Agents — `SummarizationMiddleware` API
 - Pydantic v2 — Field, Literal, and Validation
-- NVIDIA AI ACADEMY · 챗봇 프로젝트 — `chapter_05_structured_output` / `chapter_06_checkpointer_summaryzation`
