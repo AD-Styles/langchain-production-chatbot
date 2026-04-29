@@ -20,7 +20,7 @@
 
 ## 🎯 핵심 목표 (Motivation)
 
-| <br/>핵심 역량 &emsp;&emsp;&emsp;&emsp; | 상세 목표 |
+| 핵심 역량 &emsp;&emsp;&emsp;&emsp; | 상세 목표 |
 | :--- | :--- |
 | **정형 응답 강제 (Structured Output)** | `pydantic.BaseModel` 로 카테고리·긴급도·요약·상담사 연결 여부를 정의하고, `llm.with_structured_output(Type)` 으로 LLM 응답을 타입에 맞게 강제 |
 | **대화 기억 (Multi-turn Memory)** | `InMemorySaver` 체크포인터를 `create_agent(checkpointer=...)` 에 등록하고, `thread_id` 단위로 대화 맥락을 보관 |
