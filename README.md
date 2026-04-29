@@ -42,9 +42,9 @@
 │  ├─ fig_05_summarization_flow.png             # 30턴 대화에 요약 미들웨어가 작동하는 모습
 │  ├─ fig_06_thread_isolation.png               # thread_id 별 대화 격리 모습
 │  └─ fig_07_alpha_thread_walkthrough.png       # thread_alpha 5턴 통합 흐름 (분류+메모리+라우팅)
-├─ src/
-│  └─ production_chatbot.py                    # 통합 실행 스크립트
-├─ .gitignore
+├─ src/ 
+│  └─ production_chatbot.py                     # 통합 실행 스크립트
+├─ .gitignore 
 ├─ README.md
 └─ requirements.txt
 ```
