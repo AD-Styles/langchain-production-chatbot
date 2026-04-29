@@ -33,7 +33,7 @@
 
 ```text
 ├─ data/
-│  └─ customer_inquiries.json                # 8건 고객 문의 (분류기 입력)
+│  └─ customer_inquiries.json                  # 8건 고객 문의 (분류기 입력)
 ├─ results/
 │  ├─ fig_01_pipeline_overview.png           # 분류 + 챗봇 + 메모리 + 요약 전체 흐름
 │  ├─ fig_02_pydantic_schema.png             # Pydantic BaseModel 스키마 다이어그램
