@@ -59,7 +59,7 @@
 | :---: |
 | ![pipeline](results/fig_01_pipeline_overview.png) |
 
-> 고객 문의 한 건이 들어오면 두 갈래로 나뉩니다. 위쪽은 **Pydantic 분류기** 가 카테고리·긴급도를 추출해 정형 객체로 반환하고, 아래쪽은 **`InMemorySaver` + `SummarizationMiddleware`** 가 부착된 멀티턴 챗봇이 자연어 답변을 만듭니다. 두 갈래는 같은 LLM 자원을 공유하므로, 한 입력으로 분류 결과와 자연어 응답을 동시에 얻을 수 있습니다.
+> 고객 문의 한 건이 들어오면 두 갈래로 나뉘어짐. 위쪽은 **Pydantic 분류기** 가 카테고리·긴급도를 추출해 정형 객체로 반환하고, 아래쪽은 **`InMemorySaver` + `SummarizationMiddleware`** 가 부착된 멀티턴 챗봇이 자연어 답변을 만듬. 두 갈래는 같은 LLM 자원을 공유하므로, 한 입력으로 분류 결과와 자연어 응답을 동시에 얻을 수 있음.
 
 ### 2. Pydantic 정형 응답 스키마
 
@@ -67,7 +67,7 @@
 | :---: |
 | ![schema](results/fig_02_pydantic_schema.png) |
 
-> 분류기 출력용 **`InquiryClassification`** (4개 필드) 과 챗봇이 thread 메모리에 보관하는 **`CustomerProfile`** (3개 필드) 을 분리했습니다. 모든 필드 값은 `Literal` · `Enum` 으로 후보를 한정해, 잘못된 값이 나오면 Pydantic 검증 단계에서 즉시 실패합니다.
+> 분류기 출력용 **`InquiryClassification`** (4개 필드) 과 챗봇이 thread 메모리에 보관하는 **`CustomerProfile`** (3개 필드) 을 분리함. 모든 필드 값은 `Literal` · `Enum` 으로 후보를 한정해, 잘못된 값이 나오면 Pydantic 검증 단계에서 즉시 실패.
 
 ---
 
